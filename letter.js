@@ -34,10 +34,8 @@ function guess() {
                 console.log(input);
 
                 let test = new Letter(input);
-                console.log(test.input);
-                test.guessCheck();
                 test.argCheck();
-                console.log(test);
+                test.guessCheck();
             }
 
         });
@@ -47,8 +45,8 @@ function Letter(input) {
     this.input = input;
     this.check = false;
     this.guessCheck = function () {
-        if (this.check) {
-            console.log("letter has been guessed")
+        if (this.check === true) {
+            console.log(`${input}`);
         } else {
             console.log("_");
         }
@@ -57,9 +55,9 @@ function Letter(input) {
     this.argCheck = function () {
         if (this.input == a) {
             this.check = true;
-            console.log("good guess");
+            console.log("\ngood guess");
         } else {
-            console.log("keep trying");
+            console.log("\nkeep trying");
         }
     }
 }
