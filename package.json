@@ -1,0 +1,22 @@
+{
+  "name": "constructor-word-guess",
+  "version": "1.0.0",
+  "description": "This was an advanced JavaScript assignment for my full-stack web development bootcamp. It's a Hangman clone that runs in the terminal. It requires command-line user input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raglaks/constructor-word-guess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raglaks/constructor-word-guess/issues"
+  },
+  "homepage": "https://github.com/raglaks/constructor-word-guess#readme",
+  "dependencies": {
+    "inquirer": "^6.2.0"
+  }
+}
