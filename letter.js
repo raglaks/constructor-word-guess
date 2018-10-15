@@ -5,6 +5,65 @@
 // A function that returns the underlying character if the letter has been guessed, or a placeholder (like an underscore) if the letter has not been guessed
 // A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
 
-function Letter() {
-    
+const inquirer = require("inquirer");
+
+let a = "a";
+
+let input = null;
+
+function guess() {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Guess a letter",
+                name: "letter"
+            },
+
+        ])
+        .then(function (response) {
+
+            input = response.letter;
+
+            let n = input.length;
+
+
+            if (n > 1) {
+                console.log("please input a single letter only:");
+            } else {
+                console.log(input);
+
+                let test = new Letter(input);
+                console.log(test.input);
+                test.guessCheck();
+                test.argCheck();
+                console.log(test);
+            }
+
+        });
 }
+
+function Letter(input) {
+    this.input = input;
+    this.check = false;
+    this.guessCheck = function () {
+        if (this.check) {
+            console.log("letter has been guessed")
+        } else {
+            console.log("_");
+        }
+    }
+    
+    this.argCheck = function () {
+        if (this.input == a) {
+            this.check = true;
+            console.log("good guess");
+        } else {
+            console.log("keep trying");
+        }
+    }
+}
+
+guess();
+
+

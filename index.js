@@ -7,6 +7,8 @@ const inquirer = require("inquirer");
 
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
 
+let input =;
+
 function randomWord() {
     
     const arrayLength = words.length;
@@ -21,7 +23,7 @@ function guess() {
         .prompt([
             {
                 type: "input",
-                message: "\nGuess a letter",
+                message: "Guess a letter",
                 name: "letter"
             },
 
@@ -30,7 +32,10 @@ function guess() {
 
             let guess = response.letter;
 
+            input = guess;
+
             let n = guess.length;
+
 
             if (n > 1) {
                 console.log("please input a single letter only:");
@@ -43,4 +48,4 @@ function guess() {
 
 guess();
 
-randomWord();
+//randomWord();
