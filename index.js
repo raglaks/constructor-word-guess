@@ -7,45 +7,80 @@ const inquirer = require("inquirer");
 
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
 
-let input =;
+let input = null;
+
+let word = null;
+
+let count = 0;
 
 function randomWord() {
-    
+
     const arrayLength = words.length;
 
     const rando = Math.floor((Math.random() * arrayLength));
 
-    //console.log(words[rando]);
+    word = words[rando];
+
 }
 
-function guess() {
-    inquirer
-        .prompt([
-            {
-                type: "input",
-                message: "Guess a letter",
-                name: "letter"
-            },
+function guessInput() {
 
-        ])
-        .then(function (response) {
+    if (count < 4) {
+        
+        inquirer
+            .prompt([
+                {
+                    type: "input",
+                    message: "Guess a letter",
+                    name: "letter"
+                },
 
-            let guess = response.letter;
+            ])
+            .then(response => {
 
-            input = guess;
+                let guess = response.letter;
 
-            let n = guess.length;
+                input = guess;
 
+                // let n = guess.length;
 
-            if (n > 1) {
-                console.log("please input a single letter only:");
-            } else {
-                console.log(guess);
-            }
+                console.log(input);
 
-        });
+                count++;
+
+                guessInput();
+
+            });
+
+    } else {
+
+        console.log(`no more guesses bub`);
+
+        console.log(word);
+    }
+
 }
 
-guess();
 
-//randomWord();
+
+// .then(function (response) {
+
+//     let guess = response.letter;
+
+//     input = guess;
+
+//     let n = guess.length;
+
+//     if (n > 1) {
+//         console.log("please input a single letter only:");
+//     } else {
+//         console.log(input);
+//         count++;
+//         guess();
+//     }
+
+// });
+
+guessInput();
+
+randomWord();

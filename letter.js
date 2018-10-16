@@ -36,6 +36,10 @@ function guess() {
                 let test = new Letter(input);
                 test.argCheck();
                 test.guessCheck();
+
+                module.exports = {
+                    test: test,
+                }
             }
 
         });
@@ -51,7 +55,7 @@ function Letter(input) {
             console.log("_");
         }
     }
-    
+
     this.argCheck = function () {
         if (this.input == a) {
             this.check = true;
@@ -63,5 +67,7 @@ function Letter(input) {
 }
 
 guess();
+
+
 
 

@@ -6,6 +6,29 @@
 
 const letter = require("./letter.js");
 
-function Word(array) {
-    this.array = array;
+    // let wordy = new Word(w[0]);
+    // wordy.arrSplit();
+
+let w = ["awkward"];
+
+function Word(word) {
+    
+    this.word = word;
+
+    this.arrSplit = function () {
+
+        let str = this.word.split("");
+
+        str.forEach(element => {
+            console.log(`\n${element}\n`);
+        });
+
+    }
 } 
+
+// let test1 = new Word(w[0]);
+
+// test1.arrSplit();
+
+console.log(letter.test);
+ 
