@@ -4,7 +4,7 @@
 // Prompts the user for each guess and keeps track of the user's remaining guesses
 
 const inquirer = require("inquirer");
-const wordbuilder = require("./word.js");
+const Word = require("./word.js");
 
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
 
@@ -14,6 +14,8 @@ let wordString = null;
 
 let count = 0;
 
+let word = new Word();
+
 function randomWord() {
 
     const arrayLength = words.length;
@@ -22,7 +24,9 @@ function randomWord() {
 
     wordString = words[rando];
 
-    wordbuilder.wordBuild.arrSplit(wordString);
+    console.log(wordString);
+
+    console.log(word);
 
 }
 
@@ -69,12 +73,12 @@ function guessInput() {
 
         console.log(`no more guesses bub`);
 
-        console.log(wordbuilder.wordBuild.word = wordString);
+        //console.log(wordbuilder.wordBuild.word = wordString);
 
     }
 
 }
 
-guessInput();
+//guessInput();
 
 randomWord();

@@ -4,7 +4,13 @@
 // A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
 // A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
 
-function Word(word) {
+const Letter = require("./letter.js");
+
+let letter = new Letter();
+
+console.log(letter);
+
+const Word = function (word) {
     
     this.word = word;
 
@@ -13,18 +19,15 @@ function Word(word) {
         let str = this.word.split("");
 
         str.forEach(element => {
-            console.log(`\n${element}\n`);
+            letter.letterCheck.input = element;
+            //console.log(`\n${element}\n`);
+            console.log(letter.letterCheck.input);
         });
 
     }
 } 
 
-
-let wordBuild = new Word();
-
-module.exports = {
-    wordBuild: wordBuild
-}
+module.exports = Word;
 
 
  
