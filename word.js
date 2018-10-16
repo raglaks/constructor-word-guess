@@ -12,8 +12,6 @@ let letter = new Letter();
 
 const Word = function (word) {
 
-    
-    
     this.word = word;
 
     this.arrSplit = function () {
@@ -23,12 +21,16 @@ const Word = function (word) {
         str.forEach(element => {
 
             this.array.push(element);
-            console.log(this.array);
+            
         });
 
     }
 
     this.array = [];
+
+    this.stringy = function () {
+        console.log(this.word);
+    }
     
 } 
 

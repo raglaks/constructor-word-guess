@@ -22,13 +22,15 @@ function randomWord() {
 
     wordString = words[rando];
 
-    console.log(wordString);
+    //console.log(wordString);
 
     let word = new Word(wordString);
 
     word.arrSplit();
+    console.log(word.array);
+    word.stringy();
 
-    console.log(word);
+    //console.log(word);
 
 }
 
