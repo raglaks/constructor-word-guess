@@ -22,18 +22,14 @@ function randomWord() {
 
     wordString = words[rando];
 
-    console.log(wordbuilder.wordBuild.word = wordString);
-
     wordbuilder.wordBuild.arrSplit(wordString);
 
 }
 
-//console.log(wordbuilder.wordBuild);
-
 function guessInput() {
 
     if (count <= 4) {
-        
+
         inquirer
             .prompt([
                 {
@@ -49,17 +45,23 @@ function guessInput() {
 
                 input = guess;
 
-                // let n = guess.length;
+                let n = guess.length;
 
-                console.log(input);
+                if (n > 1) {
+                
+                    console.log("please input one letter only");
 
-                count++;
+                    guessInput();
 
-                // module.exports = {
-                //     input: input
-                // };
+                } else {
 
-                guessInput();
+                    console.log(input);
+
+                    count++;
+
+                    guessInput();
+
+                }
 
             });
 
@@ -67,12 +69,12 @@ function guessInput() {
 
         console.log(`no more guesses bub`);
 
-        console.log(word);
+        console.log(wordbuilder.wordBuild.word = wordString);
 
     }
 
 }
 
-//guessInput();
+guessInput();
 
 randomWord();
