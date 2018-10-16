@@ -14,8 +14,6 @@ let wordString = null;
 
 let count = 0;
 
-let word = new Word();
-
 function randomWord() {
 
     const arrayLength = words.length;
@@ -25,6 +23,10 @@ function randomWord() {
     wordString = words[rando];
 
     console.log(wordString);
+
+    let word = new Word(wordString);
+
+    word.arrSplit();
 
     console.log(word);
 

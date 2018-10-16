@@ -8,9 +8,11 @@ const Letter = require("./letter.js");
 
 let letter = new Letter();
 
-console.log(letter);
+//console.log(letter);
 
 const Word = function (word) {
+
+    
     
     this.word = word;
 
@@ -19,12 +21,15 @@ const Word = function (word) {
         let str = this.word.split("");
 
         str.forEach(element => {
-            letter.letterCheck.input = element;
-            //console.log(`\n${element}\n`);
-            console.log(letter.letterCheck.input);
+
+            this.array.push(element);
+            console.log(this.array);
         });
 
     }
+
+    this.array = [];
+    
 } 
 
 module.exports = Word;
