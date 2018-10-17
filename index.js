@@ -6,6 +6,7 @@
 const inquirer = require("inquirer");
 const Word = require("./word.js");
 
+
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
 
 let input = null;
@@ -13,6 +14,8 @@ let input = null;
 let wordString = null;
 
 let count = 0;
+
+let word = null;
 
 function randomWord() {
 
@@ -22,19 +25,17 @@ function randomWord() {
 
     wordString = words[rando];
 
-    //console.log(wordString);
-
-    let word = new Word(wordString);
+    word = new Word(wordString);
 
     word.arrSplit();
-    console.log(word.array);
-    word.stringy();
 
-    //console.log(word);
+    word.printWord();
 
 }
 
 function guessInput() {
+
+    word.argCheck();
 
     if (count <= 4) {
 
@@ -43,20 +44,20 @@ function guessInput() {
                 {
                     type: "input",
                     message: "Guess a letter",
-                    name: "letter"
+                    name: "input"
                 },
 
             ])
             .then(response => {
 
-                let guess = response.letter;
+                let guess = response.input;
 
                 input = guess;
 
                 let n = guess.length;
 
                 if (n > 1) {
-                
+
                     console.log("please input one letter only");
 
                     guessInput();
@@ -64,6 +65,8 @@ function guessInput() {
                 } else {
 
                     console.log(input);
+
+                    console.log(word);
 
                     count++;
 
@@ -76,13 +79,12 @@ function guessInput() {
     } else {
 
         console.log(`no more guesses bub`);
-
-        //console.log(wordbuilder.wordBuild.word = wordString);
+        console.log(wordString);
 
     }
 
 }
 
-//guessInput();
-
 randomWord();
+
+guessInput();

@@ -8,8 +8,6 @@ const Letter = require("./letter.js");
 
 let letter = new Letter();
 
-//console.log(letter);
-
 const Word = function (word) {
 
     this.word = word;
@@ -21,20 +19,32 @@ const Word = function (word) {
         str.forEach(element => {
 
             this.array.push(element);
-            
+
         });
 
     }
 
     this.array = [];
 
-    this.stringy = function () {
-        console.log(this.word);
+    this.printWord = function () {
+
+        this.array.forEach(element => {
+
+            letter.toString();
+
+        });
+
+        console.log(this.array);
+
     }
-    
-} 
+
+    this.argCheck = function (input) {
+        letter.argCheck(input);
+        letter.toString();
+    }
+
+}
 
 module.exports = Word;
 
 
- 
