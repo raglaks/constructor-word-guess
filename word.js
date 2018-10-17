@@ -20,7 +20,6 @@ const Word = function (word) {
 
             this.array.push(element);
 
-
         });
 
     }
@@ -37,6 +36,11 @@ const Word = function (word) {
 
         console.log(this.array);
 
+    }
+
+    this.argCheck = function (input) {
+        letter.argCheck(input);
+        letter.toString();
     }
 
 }

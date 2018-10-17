@@ -14,17 +14,13 @@ const Letter = function (input) {
 
     this.toString = function () {
 
-        for (i = 0; i < this.input.length; i++) {
+        if (this.check === true) {
 
-            if (this.check === true) {
+            console.log(`${input}`);
 
-                console.log(`${input}`);
+        } else {
 
-            } else {
-
-                console.log("_");
-
-            }
+            console.log("_");
 
         }
 
@@ -36,23 +32,27 @@ const Letter = function (input) {
 
             this.check = true;
 
-            console.log("\ngood guess");
+            console.log("\ngood guess\n");
+
+            this.toString();
 
         } else {
 
-            console.log("\nkeep trying");
+            console.log("\nkeep trying\n");
+
+            this.toString();
 
         }
     }
 }
 
-// let letter = new Letter("abad");
 
-// letter.toString();
+//each letter of the selected word must be built into objects like so:
+let letter = new Letter("f");
 
-// letter.argCheck("abad");
 
-// letter.toString();
+//this is where the user input has to go
+letter.argCheck("d");
 
 module.exports = Letter;
 

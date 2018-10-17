@@ -35,6 +35,8 @@ function randomWord() {
 
 function guessInput() {
 
+    word.argCheck();
+
     if (count <= 4) {
 
         inquirer
@@ -66,16 +68,6 @@ function guessInput() {
 
                     console.log(word);
 
-                    //let letter = new Letter(input);
-
-                    // word.array.forEach(element => {
-
-                    //     letter.a = element;
-
-                    // });
-
-                    // console.log(letter.a);
-
                     count++;
 
                     guessInput();
@@ -95,4 +87,4 @@ function guessInput() {
 
 randomWord();
 
-//guessInput();
+guessInput();
