@@ -48,11 +48,11 @@ const Letter = function (input) {
 
 
 //each letter of the selected word must be built into objects like so:
-let letter = new Letter("f");
+//let letter = new Letter("f");
 
 
 //this is where the user input has to go
-letter.argCheck("d");
+//letter.argCheck("d");
 
 module.exports = Letter;
 
