@@ -6,25 +6,53 @@
 // A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
 
 const Letter = function (input) {
+
+    //this is the string value that stores the underlying character
     this.input = input;
+
     this.check = false;
-    this.guessCheck = function () {
-        if (this.check === true) {
-            console.log(`${input}`);
-        } else {
-            console.log("_");
+
+    this.toString = function () {
+
+        for (i = 0; i < this.input.length; i++) {
+
+            if (this.check === true) {
+
+                console.log(`${input}`);
+
+            } else {
+
+                console.log("_");
+
+            }
+
         }
+
     }
 
-    this.argCheck = function () {
-        if (this.input === letter) {
+    this.argCheck = function (arg) {
+
+        if (this.input === arg) {
+
             this.check = true;
+
             console.log("\ngood guess");
+
         } else {
+
             console.log("\nkeep trying");
+
         }
     }
 }
+
+// let letter = new Letter("abad");
+
+// letter.toString();
+
+// letter.argCheck("abad");
+
+// letter.toString();
 
 module.exports = Letter;
 
