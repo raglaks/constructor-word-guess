@@ -34,13 +34,9 @@ const Letter = function (input) {
 
             console.log("\ngood guess\n");
 
-            this.toString();
-
         } else {
 
             console.log("\nkeep trying\n");
-
-            this.toString();
 
         }
     }
@@ -48,11 +44,12 @@ const Letter = function (input) {
 
 
 //each letter of the selected word must be built into objects like so:
-//let letter = new Letter("f");
-
+let letter = new Letter("f");
 
 //this is where the user input has to go
-//letter.argCheck("d");
+letter.argCheck("f");
+
+letter.toString();
 
 module.exports = Letter;
 

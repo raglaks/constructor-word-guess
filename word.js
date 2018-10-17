@@ -8,9 +8,11 @@ const Letter = require("./letter.js");
 
 const Word = function (word) {
 
-    this.letterObjects = [];
-
     this.word = word;
+
+    this.array = [];
+
+    this.letterObjects = [];
 
     this.arrSplit = function () {
 
@@ -24,24 +26,17 @@ const Word = function (word) {
 
     }
 
-    this.array = [];
-
-    this.printWord = function () {
+    this.letterObj = function () {
 
         for (i = 0; i < this.array.length; i++) {
 
             let letObjs = new Letter(this.array[i]);
             this.letterObjects.push(letObjs);
 
+            letObjs.argCheck("f");
+
         }
-        
-        console.log(this.letterObjects);
 
-    }
-
-    this.argCheck = function (input) {
-        letter.argCheck(input);
-        letter.toString();
     }
 
 }
@@ -50,7 +45,9 @@ let word = new Word("four");
 
 word.arrSplit();
 
-word.printWord();
+word.letterObj();
+
+console.log(word);
 
 module.exports = Word;
 
