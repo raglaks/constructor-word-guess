@@ -29,7 +29,7 @@ function randomWord() {
 
     word.arrSplit();
 
-    word.printWord();
+    word.letterObj();
 
 }
 
@@ -87,4 +87,4 @@ function guessInput() {
 
 randomWord();
 
-guessInput();
+//guessInput();

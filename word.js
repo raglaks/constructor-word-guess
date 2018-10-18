@@ -33,21 +33,37 @@ const Word = function (word) {
             let letObjs = new Letter(this.array[i]);
             this.letterObjects.push(letObjs);
 
-            letObjs.argCheck("f");
+            letObjs.toString();
 
         }
 
     }
 
+    this.argCheck2 = function (arg) {
+        
+        this.letterObjects.forEach(element => {
+
+            element.argCheck(arg);
+
+            element.toString();
+            
+        });
+
+    }
+
 }
 
+
+//must pass selected word to this constructor var
 let word = new Word("four");
 
 word.arrSplit();
 
 word.letterObj();
 
-console.log(word);
+word.argCheck2("p");
+
+//console.log(word);
 
 module.exports = Word;
 
