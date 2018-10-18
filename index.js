@@ -6,7 +6,6 @@
 const inquirer = require("inquirer");
 const Word = require("./word.js");
 
-
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
 
 let input = null;
@@ -35,9 +34,7 @@ function randomWord() {
 
 function guessInput() {
 
-    word.argCheck();
-
-    if (count <= 4) {
+    if (count <= 8) {
 
         inquirer
             .prompt([
@@ -64,7 +61,9 @@ function guessInput() {
 
                 } else {
 
-                    console.log(input);
+                    word.argCheck2(input);
+
+                    //word.letterObj();
 
                     console.log(word);
 
@@ -79,7 +78,7 @@ function guessInput() {
     } else {
 
         console.log(`no more guesses bub`);
-        console.log(wordString);
+        console.log(word);
 
     }
 
@@ -87,4 +86,4 @@ function guessInput() {
 
 randomWord();
 
-//guessInput();
+guessInput();

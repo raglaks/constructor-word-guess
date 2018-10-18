@@ -45,7 +45,7 @@ const Word = function (word) {
 
             element.argCheck(arg);
 
-            element.toString();
+            //element.toString();
             
         });
 
@@ -55,13 +55,13 @@ const Word = function (word) {
 
 
 //must pass selected word to this constructor var
-let word = new Word("four");
+// let word = new Word("four");
 
-word.arrSplit();
+// word.arrSplit();
 
-word.letterObj();
+// word.letterObj();
 
-word.argCheck2("p");
+// word.argCheck2("p");
 
 //console.log(word);
 

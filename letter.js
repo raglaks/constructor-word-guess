@@ -32,19 +32,13 @@ const Letter = function (input) {
 
             this.check = true;
 
-            console.log("\ngood guess\n");
-
-        } else {
-
-            console.log("\nkeep trying\n");
-
-        }
+        } 
     }
 }
 
 
 //each letter of the selected word must be built into objects like so:
-let letter = new Letter("f");
+//let letter = new Letter("f");
 
 
 //letter.toString();
