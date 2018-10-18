@@ -33,7 +33,7 @@ const Word = function (word) {
             let letObjs = new Letter(this.array[i]);
             this.letterObjects.push(letObjs);
 
-            letObjs.toString();
+            //letObjs.toString();
 
         }
 
@@ -51,19 +51,33 @@ const Word = function (word) {
 
     }
 
+    this.winner = function () {
+        
+        this.letterObjects.forEach(element => {
+
+            if (element.check === true) {
+                console.log (`\nwinner!'\n`)
+            } else {
+                console.log (`neigh`);
+            }
+
+        });
+
+    }
+
 }
 
 
 //must pass selected word to this constructor var
-// let word = new Word("four");
+let word = new Word("four");
 
-// word.arrSplit();
+word.arrSplit();
 
-// word.letterObj();
+word.letterObj();
 
-// word.argCheck2("p");
+word.argCheck2("p");
 
-//console.log(word);
+word.winner();
 
 module.exports = Word;
 

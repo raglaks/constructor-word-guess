@@ -82,6 +82,6 @@ function guessInput() {
 
 }
 
-randomWord();
+//randomWord();
 
-guessInput();
+//guessInput();
