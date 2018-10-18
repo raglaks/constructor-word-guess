@@ -40,7 +40,7 @@ function guessInput() {
             .prompt([
                 {
                     type: "input",
-                    message: "Guess a letter",
+                    message: `${9 - count} guesses remaining--input letter: `,
                     name: "input"
                 },
 
@@ -62,8 +62,6 @@ function guessInput() {
                 } else {
 
                     word.argCheck2(input);
-
-                    //word.letterObj();
 
                     console.log(word);
 

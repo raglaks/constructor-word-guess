@@ -45,7 +45,7 @@ const Word = function (word) {
 
             element.argCheck(arg);
 
-            //element.toString();
+            element.toString();
             
         });
 
