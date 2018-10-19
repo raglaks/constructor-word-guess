@@ -42,7 +42,7 @@ function guessInput() {
             .prompt([
                 {
                     type: "input",
-                    message: `${10 - count} guesses remaining--input letter: `,
+                    message: `guesses remaining: ${9 - count}\ninput letter: `,
                     name: "input"
                 },
 
@@ -65,8 +65,6 @@ function guessInput() {
 
                     word.argCheck2(input);
 
-                    //console.log(word.letterObjects);
-
                     count++;
 
                     guessInput();
@@ -78,7 +76,6 @@ function guessInput() {
     } else {
 
         console.log(`no more guesses bub`);
-        console.log(word);
 
     }
 
