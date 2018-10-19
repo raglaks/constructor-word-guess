@@ -14,6 +14,7 @@ const Word = function (word) {
 
     this.letterObjects = [];
 
+    //this method splits the chosen word into an array of letter called "array"
     this.arrSplit = function () {
 
         let str = this.word.split("");
@@ -26,6 +27,7 @@ const Word = function (word) {
 
     }
 
+    //this method creates a letter object for each letter
     this.letterObj = function () {
 
         for (i = 0; i < this.array.length; i++) {
@@ -35,8 +37,15 @@ const Word = function (word) {
 
         }
 
+        this.letterObjects.forEach(element => {
+
+            element.toString();
+
+        });
+
     }
 
+    //this one checks whether letters have been guessed or not
     this.argCheck2 = function (arg) {
 
         this.letterObjects.forEach(element => {
@@ -67,16 +76,24 @@ const Word = function (word) {
         let gameWin = this.trueCheck.every(allTrue);
 
         if (gameWin === true) {
+            
+            console.log("\nyou win!");
+
             process.exit();
 
-            console.log("\nyou win!");
         }
     }
 
-    
-    //console.log(this.trueCheck);
+    this.printWord = function () {
 
+        let disp = " ";
 
+        for (i = 0; i < this.array.length; i++) {
+            disp += this.array[i].toString();
+        }
+
+        console.log(disp);
+    }
 
 }
 

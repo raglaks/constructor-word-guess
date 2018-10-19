@@ -12,8 +12,6 @@ const Letter = function (input) {
 
     this.check = false;
 
-    this.trueCount = 0;
-
     this.toString = function () {
 
         if (this.check === true) {
