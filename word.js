@@ -33,51 +33,64 @@ const Word = function (word) {
             let letObjs = new Letter(this.array[i]);
             this.letterObjects.push(letObjs);
 
-            //letObjs.toString();
-
         }
 
     }
 
     this.argCheck2 = function (arg) {
-        
+
         this.letterObjects.forEach(element => {
 
             element.argCheck(arg);
 
             element.toString();
-            
+
         });
 
     }
 
     this.winner = function () {
-        
-        this.letterObjects.forEach(element => {
 
-            if (element.check === true) {
-                console.log (`\nwinner!'\n`)
-            } else {
-                console.log (`neigh`);
-            }
+        this.trueCheck = [];
 
-        });
+        for (i = 0; i < this.letterObjects.length; i++) {
 
+            let checkers = this.letterObjects[i].check;
+            this.trueCheck.push(checkers);
+
+        }
+
+        function allTrue(n) {
+            return n === true;
+        }
+
+        let gameWin = this.trueCheck.every(allTrue);
+
+        if (gameWin === true) {
+            process.exit();
+
+            console.log("\nyou win!");
+        }
     }
+
+    
+    //console.log(this.trueCheck);
+
+
 
 }
 
 
 //must pass selected word to this constructor var
-let word = new Word("four");
+//let word = new Word("four");
 
-word.arrSplit();
+// word.arrSplit();
 
-word.letterObj();
+// word.letterObj();
 
-word.argCheck2("p");
+// word.argCheck2("p");
 
-word.winner();
+// word.winner();
 
 module.exports = Word;
 

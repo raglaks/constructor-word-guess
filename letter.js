@@ -12,6 +12,8 @@ const Letter = function (input) {
 
     this.check = false;
 
+    this.trueCount = 0;
+
     this.toString = function () {
 
         if (this.check === true) {
@@ -34,22 +36,15 @@ const Letter = function (input) {
 
         } 
     }
+
 }
 
 
 //each letter of the selected word must be built into objects like so:
 //let letter = new Letter("f");
 
-
-//letter.toString();
-
 //this is where the user input has to go
 //letter.argCheck("d");
-
-//letter.toString();
-
-//console.log(letter);
-
 
 module.exports = Letter;
 

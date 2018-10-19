@@ -34,13 +34,15 @@ function randomWord() {
 
 function guessInput() {
 
+    word.winner();
+
     if (count <= 8) {
 
         inquirer
             .prompt([
                 {
                     type: "input",
-                    message: `${9 - count} guesses remaining--input letter: `,
+                    message: `${10 - count} guesses remaining--input letter: `,
                     name: "input"
                 },
 
@@ -63,7 +65,7 @@ function guessInput() {
 
                     word.argCheck2(input);
 
-                    console.log(word);
+                    //console.log(word.letterObjects);
 
                     count++;
 
@@ -82,6 +84,6 @@ function guessInput() {
 
 }
 
-//randomWord();
+randomWord();
 
-//guessInput();
+guessInput();
