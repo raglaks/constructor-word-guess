@@ -5,6 +5,7 @@
 // A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
 
 const Letter = require("./letter.js");
+const color = require("colors");
 
 const Word = function (word) {
 
@@ -37,28 +38,7 @@ const Word = function (word) {
 
         }
 
-        this.letterObjects.forEach(element => {
-
-            element.toString();
-
-        });
-
     }
-
-    //this one checks whether letters have been guessed or not
-    // this.argCheck2 = function (arg) {
-
-    //     this.letterObjects.forEach(element => {
-
-    //         element.argCheck(arg);
-
-    //         element.toString();
-
-    //     });
-
-        //console.log(this.word);
-
-    //}
 
     this.winner = function () {
 
@@ -79,7 +59,7 @@ const Word = function (word) {
 
         if (gameWin === true) {
 
-            console.log("you win!");
+            console.log("you win!".green);
 
             process.exit();
 

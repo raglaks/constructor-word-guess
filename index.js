@@ -36,6 +36,7 @@ function randomWord() {
 function guessInput() {
 
     word.winner();
+    
     word.printWord(input);
 
     if (count <= 8) {
@@ -75,8 +76,8 @@ function guessInput() {
 
     } else {
 
-        console.log(`no more guesses, try again`);
-        console.log(`\nthe word was: ${word.word}`);
+        console.log(`no more guesses, try again`.red);
+        console.log(`\nthe word was: ${word.word}`.yellow);
 
     }
 
