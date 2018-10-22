@@ -20,7 +20,7 @@ const Letter = function (input) {
 
         } else {
 
-            console.log("_");
+            //console.log("_");
 
         }
 

@@ -56,6 +56,8 @@ const Word = function (word) {
 
         });
 
+        //console.log(this.word);
+
     }
 
     this.winner = function () {
@@ -76,7 +78,7 @@ const Word = function (word) {
         let gameWin = this.trueCheck.every(allTrue);
 
         if (gameWin === true) {
-            
+
             console.log("\nyou win!");
 
             process.exit();
@@ -84,15 +86,23 @@ const Word = function (word) {
         }
     }
 
-    this.printWord = function () {
+    this.printWord = function (arg) {
 
         let disp = " ";
 
-        for (i = 0; i < this.array.length; i++) {
-            disp += this.array[i].toString();
-        }
+        this.letterObjects.forEach(element => {
+
+            element.argCheck(arg);
+
+            if (element.check === true) {
+                disp += element.input;
+            } else {
+                disp += "_ ";
+            }
+        });
 
         console.log(disp);
+
     }
 
 }
