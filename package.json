@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/raglaks/constructor-word-guess#readme",
   "dependencies": {
+    "colors": "^1.3.2",
     "inquirer": "^6.2.0"
   }
 }

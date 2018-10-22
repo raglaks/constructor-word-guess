@@ -4,6 +4,7 @@
 // Prompts the user for each guess and keeps track of the user's remaining guesses
 
 const inquirer = require("inquirer");
+const color = require("colors");
 const Word = require("./word.js");
 
 const words = ["awkward", "bagpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "fjord", "gazebo", "gypsy"];
