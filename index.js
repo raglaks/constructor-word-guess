@@ -35,9 +35,9 @@ function randomWord() {
 
 function guessInput() {
 
-    word.winner();
-    
     word.printWord(input);
+
+    word.winner();
 
     if (count <= 8) {
 
@@ -60,7 +60,7 @@ function guessInput() {
 
                 if (n > 1) {
 
-                    console.log("please input one letter only");
+                    console.log("please input one letter only".red);
 
                     guessInput();
 
