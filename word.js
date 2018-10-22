@@ -97,11 +97,11 @@ const Word = function (word) {
             if (element.check === true) {
                 disp += element.input;
             } else {
-                disp += "_ ";
+                disp += " _ ";
             }
         });
 
-        console.log(disp);
+        console.log(`\n${disp}\n`);
 
     }
 

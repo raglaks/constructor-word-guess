@@ -18,11 +18,7 @@ const Letter = function (input) {
 
             console.log(`${input}`);
 
-        } else {
-
-            //console.log("_");
-
-        }
+        } 
 
     }
 

@@ -35,6 +35,7 @@ function randomWord() {
 function guessInput() {
 
     word.winner();
+    // word.printWord(input);
 
     if (count <= 8) {
 
@@ -63,7 +64,7 @@ function guessInput() {
 
                 } else {
 
-                    word.argCheck2(input);
+                    //word.argCheck2(input);
 
                     word.printWord(input);
 
@@ -77,7 +78,7 @@ function guessInput() {
 
     } else {
 
-        console.log(`\nno more guesses, try again`);
+        console.log(`no more guesses, try again`);
         console.log(`\nthe word was: ${word.word}`);
 
     }
