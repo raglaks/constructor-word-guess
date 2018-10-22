@@ -46,19 +46,19 @@ const Word = function (word) {
     }
 
     //this one checks whether letters have been guessed or not
-    this.argCheck2 = function (arg) {
+    // this.argCheck2 = function (arg) {
 
-        this.letterObjects.forEach(element => {
+    //     this.letterObjects.forEach(element => {
 
-            element.argCheck(arg);
+    //         element.argCheck(arg);
 
-            element.toString();
+    //         element.toString();
 
-        });
+    //     });
 
         //console.log(this.word);
 
-    }
+    //}
 
     this.winner = function () {
 
@@ -79,7 +79,7 @@ const Word = function (word) {
 
         if (gameWin === true) {
 
-            console.log("\nyou win!");
+            console.log("you win!");
 
             process.exit();
 
@@ -95,7 +95,7 @@ const Word = function (word) {
             element.argCheck(arg);
 
             if (element.check === true) {
-                disp += element.input;
+                disp += " " + element.input + " ";
             } else {
                 disp += " _ ";
             }
