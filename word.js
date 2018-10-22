@@ -59,7 +59,7 @@ const Word = function (word) {
 
         if (gameWin === true) {
 
-            console.log("you win!".green);
+            console.log("you win!\n".green);
 
             process.exit();
 

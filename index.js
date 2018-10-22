@@ -45,7 +45,7 @@ function guessInput() {
             .prompt([
                 {
                     type: "input",
-                    message: `guesses remaining: ${9 - count}\ninput letter: `,
+                    message: `guesses remaining: ${9 - count}`.cyan+`\ninput letter: `.yellow,
                     name: "input"
                 },
 
@@ -60,7 +60,7 @@ function guessInput() {
 
                 if (n > 1) {
 
-                    console.log("please input one letter only".red);
+                    console.log("\nplease input one letter only".red);
 
                     guessInput();
 
@@ -77,7 +77,7 @@ function guessInput() {
     } else {
 
         console.log(`no more guesses, try again`.red);
-        console.log(`\nthe word was: ${word.word}`.yellow);
+        console.log(`\nthe word was:`.red+` ${word.word}\n`.cyan);
 
     }
 
