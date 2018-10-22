@@ -35,7 +35,7 @@ function randomWord() {
 function guessInput() {
 
     word.winner();
-    // word.printWord(input);
+    word.printWord(input);
 
     if (count <= 8) {
 
@@ -63,10 +63,6 @@ function guessInput() {
                     guessInput();
 
                 } else {
-
-                    //word.argCheck2(input);
-
-                    word.printWord(input);
 
                     count++;
 
